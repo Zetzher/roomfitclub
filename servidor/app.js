@@ -46,7 +46,7 @@ app.use(
   );
 
   // CORS MIDDLEWARE SETUP
-  /*
+  
 app.use(
   cors({
     credentials: true,
@@ -63,7 +63,7 @@ app.use(
    res.header('Access-Control-Allow-Credentials', true);
    next();
  });
-*/
+
 
 app.use(logger('dev'));
 app.use(express.json());
