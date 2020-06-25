@@ -46,7 +46,7 @@ app.use(
   );
 
   // CORS MIDDLEWARE SETUP
-/*app.use(
+app.use(
   cors({
     credentials: true,
     origin: ['http://localhost:3000', 'http://roomfitclub.com/', 'https://roomfit.herokuapp.com'],
@@ -60,7 +60,7 @@ app.use(
    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
    res.setHeader('Access-Control-Allow-Credentials', true);
    next();
- });*/
+ });
 
 
 app.use(logger('dev'));
