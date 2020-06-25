@@ -49,7 +49,7 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    origin: ['http://localhost:3000', 'http://roomfitclub.com/', 'https://roomfitclub.com/'],
+    origin: ['*'],
   })
 );
 
