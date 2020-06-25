@@ -46,6 +46,7 @@ app.use(
   );
 
   // CORS MIDDLEWARE SETUP
+  /*
 app.use(
   cors({
     credentials: true,
@@ -53,7 +54,7 @@ app.use(
   })
 );
 
-/*
+
    app.use((req, res, next) => {
     
    res.header('Access-Control-Allow-Origin', '*');
