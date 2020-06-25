@@ -53,7 +53,7 @@ app.use(
   })
 );
 
-
+/*
    app.use((req, res, next) => {
     
    res.header('Access-Control-Allow-Origin', '*');
@@ -62,7 +62,7 @@ app.use(
    res.header('Access-Control-Allow-Credentials', true);
    next();
  });
-
+*/
 
 app.use(logger('dev'));
 app.use(express.json());
