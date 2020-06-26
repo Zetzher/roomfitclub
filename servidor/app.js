@@ -50,7 +50,7 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    origin: ['http://localhost:3000', 'https://roomfitclub.web.app', 'https://roomfitclub.firebaseapp.com'],
+    origin: 'https://roomfitclub.web.app'
   })
 );
 
