@@ -29,8 +29,11 @@ router.post("/", async (req, res, next) => {
     secure: false,
     auth: {
         user: "info@roomfitclub.com",
-        pass: "Jabasagenjo1"
+        pass: "Ironhack123"
     },
+    tls: {
+        rejectUnauthorized: false
+    }
 });
 
 let mailOptions = {
@@ -63,6 +66,7 @@ let mailOptions = {
 transporter.sendMail(mailOptions, (error, info) => {
     if(error) {
         res.status(500). send(error.message);
+        console.log(error.message)
         } else {
             console.log("Email enviado")
             res.status(200).json(req.body)
@@ -87,8 +91,11 @@ router.post('/pullit', async (req, res, next) => {
         secure: false,
         auth: {
             user: "info@roomfitclub.com",
-            pass: "Jabasagenjo1"
+            pass: "Ironhack123"
         },
+        tls: {
+            rejectUnauthorized: false
+        }
     });
     
     let mailOptions = {
@@ -114,6 +121,7 @@ router.post('/pullit', async (req, res, next) => {
     transporter.sendMail(mailOptions, (error, info) => {
         if(error) {
             res.status(500). send(error.message);
+            console.log(error.message)
             } else {
                 console.log("Email enviado")
                 res.status(200).json(req.body)
