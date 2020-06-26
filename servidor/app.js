@@ -50,16 +50,16 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    origin: 'https://roomfitclub.web.app'
+    origin: ['http://localhost:3000', 'https://roomfitclub.web.app', 'https://roomfitclub.firebaseapp.com']
   })
 );
 
 
 app.all((req, res, next) => {
-     res.setHeader('Access-Control-Allow-Origin', 'https://roomfitclub.web.app', 'https://roomfitclub.firebaseapp.com');
-     res.setHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, OPTIONS, DELETE');
-     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, X-API-KEY, Access-Control-Allow-Request-Method');
-     res.setHeader('Access-Control-Allow-Credentials', true);
+     res.header('Access-Control-Allow-Origin', 'https://roomfitclub.web.app', 'https://roomfitclub.firebaseapp.com');
+     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, OPTIONS, DELETE');
+     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, X-API-KEY, Access-Control-Allow-Request-Method');
+     res.header('Access-Control-Allow-Credentials', true);
      next();
    });
 
